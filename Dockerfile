@@ -6,7 +6,7 @@ FROM --platform=linux/x86_64 ubuntu:22.04
 RUN yes | unminimize 
 # locale-gen を使うため
 RUN apt-get update && \
-    apt-get install -y locales
+    apt-get install -y locales vim
 # 環境変数DEBIAN_FRONTENDを一時的にnoninteractive (非対話型)モードに
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata 
 #  Ubuntu を日本語化するため
