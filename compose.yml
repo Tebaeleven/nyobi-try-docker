@@ -1,0 +1,7 @@
+version: '3' # Composeファイル形式のバージョン
+services: # 全体を構成する要素（コンテナ）
+  app: # サービスの名前
+    build: . # 指定したディレクトリにあるDockerfileからDockerイメージを構築
+    tty: true # コンテナを起動させ続けるため
+    volumes: #「マウント」と呼ばれるファイル共有
+      - .:/try-docker #ホストOSの.と、コンテナの/try-dockerというディレクトリを紐づけ
